@@ -25,10 +25,10 @@ function App() {
       }}
       templateColumns={{
         base: "1fr",
-        lg: "220px 1fr",
+        lg: "270px 1fr",
       }}
     >
-      <GridItem area="nav">
+      <GridItem area="nav" paddingY={4}>
         <NavBar />
       </GridItem>
       <Show above="lg">
