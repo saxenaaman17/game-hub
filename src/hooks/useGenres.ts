@@ -1,4 +1,5 @@
-import useData from "./useData";
+// import useData from "./useData";
+import data from "../data/genres";
 
 export interface Genre {
   id: number;
@@ -7,6 +8,9 @@ export interface Genre {
   image_background: string;
 }
 
-const useGenres = () => useData<Genre>("/genres");
+// use it for dynamic data but genres hardly ever change, so we can keep it as static data in our app
+// const useGenres = () => useData<Genre>("/genres");
+
+const useGenres = () => ({ data: data, isLoading: false, error: null });
 
 export default useGenres;
